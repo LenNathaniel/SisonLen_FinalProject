@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header -->
   <nav class="main-header">
     <div class="left-info">
       <h4>Sison, Len Nathaniel M.</h4>
@@ -24,29 +23,29 @@
   </nav>
 
   <main>
-    <div class="page-header">
-      <h1>Participants</h1>
-      <div class="crud-buttons">
-        <button onclick="showAddForm()">Add</button>
-        <button onclick="showEditSelect()">Edit</button>
-        <button onclick="showDeleteForm()">Delete</button>
-      </div>
-    </div>
+<div class="page-header">
+  <div class="left-controls">
+    <h1>Participants</h1>
+    <button id="togglePlayersBtn" onclick="toggleAllPlayers()" class="show-btn">Show Players</button>
+  </div>
+  <div class="crud-buttons">
+    <button onclick="showAddForm()">Add</button>
+    <button onclick="showEditSelect()">Edit</button>
+    <button onclick="showDeleteForm()">Delete</button>
+  </div>
+</div>
 
     <div id="teams-container"></div>
   </main>
 
-  <!-- Add/Edit Form -->
   <div id="teamFormModal" class="modal hidden">
     <form id="teamForm" onsubmit="handleFormSubmit(event)">
       <h3 id="formTitle">Add Team</h3>
       <input type="hidden" id="editIndex" />
       <input type="text" id="teamName" placeholder="Team Name" required />
-
       <label for="teamLogoFile">Team Logo:</label>
       <input type="file" id="teamLogoFile" accept="image/*" />
       <img id="logoPreview" src="" alt="Logo Preview" style="display:none; width: 100px; height: 100px; margin: 10px auto;" />
-
       <div id="playersInputs">
         <input type="text" placeholder="Player 1" required />
         <input type="text" placeholder="Player 2" required />
@@ -59,7 +58,6 @@
     </form>
   </div>
 
-  <!-- Delete Modal -->
   <div id="deleteModal" class="modal hidden">
     <div>
       <h3>Delete a Team</h3>
@@ -69,7 +67,6 @@
     </div>
   </div>
 
-  <!-- Edit Modal -->
   <div id="editModal" class="modal hidden">
     <div>
       <h3>Edit a Team</h3>
