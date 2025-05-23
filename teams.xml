@@ -2,7 +2,7 @@
 <teams>
   <team>
     <name>Aurora Gaming</name>
-    <logo>images/aurora.png</logo>
+    <logo>aurora.png</logo>
     <player>Nightfall</player>
     <player>kiyotaka</player>
     <player>TORONTOTOKYO</player>
@@ -11,7 +11,7 @@
   </team>
   <team>
     <name>BetBoom Team</name>
-    <logo>images/betboom.png</logo>
+    <logo>betboom.png</logo>
     <player>Kiritych</player>
     <player>gpk</player>
     <player>MieRo</player>
@@ -20,7 +20,7 @@
   </team>
   <team>
     <name>Team Liquid</name>
-    <logo>images/liquid.png</logo>
+    <logo>liquid.png</logo>
     <player>V-Tune</player>
     <player>Nisha</player>
     <player>SaberLight</player>
@@ -29,7 +29,7 @@
   </team>
   <team>
     <name>Shopify Rebellion</name>
-    <logo>images/sr.png</logo>
+    <logo>sr.png</logo>
     <player>Timado</player>
     <player>Yopaj</player>
     <player>Davai Lama</player>
@@ -38,7 +38,7 @@
   </team>
   <team>
     <name>Xtreme Gaming</name>
-    <logo>images/xg.png</logo>
+    <logo>xg.png</logo>
     <player>Ame</player>
     <player>Xm</player>
     <player>Xxs</player>
@@ -47,7 +47,7 @@
   </team>
   <team>
     <name>BOOM Esports</name>
-    <logo>images/boom.png</logo>
+    <logo>boom.png</logo>
     <player>JaCkky</player>
     <player>Armel</player>
     <player>Jabz</player>
@@ -56,7 +56,7 @@
   </team>
   <team>
     <name>PARIVISION</name>
-    <logo>images/parivision.png</logo>
+    <logo>parivision.png</logo>
     <player>Satanic</player>
     <player>No[o]ne-</player>
     <player>DM</player>
@@ -65,7 +65,7 @@
   </team>
   <team>
     <name>Talon Esports</name>
-    <logo>images/talon.png</logo>
+    <logo>talon.png</logo>
     <player>23savage</player>
     <player>Mikoto</player>
     <player>Ws</player>
@@ -74,7 +74,7 @@
   </team>
   <team>
     <name>Gaimin Gladiators</name>
-    <logo>images/gg.png</logo>
+    <logo>gg.png</logo>
     <player>watson</player>
     <player>Quinn</player>
     <player>Ace</player>
@@ -83,7 +83,7 @@
   </team>
   <team>
     <name>Team Falcons</name>
-    <logo>images/falcons.png</logo>
+    <logo>falcons.png</logo>
     <player>skiter</player>
     <player>Malr1ne</player>
     <player>ATF</player>
