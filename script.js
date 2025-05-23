@@ -1,6 +1,21 @@
 let teams = [];
+let uploadedLogoDataUrl = "";
 
 document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("teamLogoFile").addEventListener("change", function () {
+    const file = this.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        uploadedLogoDataUrl = e.target.result;
+        const preview = document.getElementById("logoPreview");
+        preview.src = uploadedLogoDataUrl;
+        preview.style.display = "block";
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
   fetch("teams.xml")
     .then((response) => response.text())
     .then((data) => {
@@ -76,6 +91,8 @@ function showAddForm() {
   document.getElementById("teamForm").reset();
   document.getElementById("formTitle").textContent = "Add Team";
   document.getElementById("editIndex").value = "";
+  document.getElementById("logoPreview").style.display = "none";
+  uploadedLogoDataUrl = "";
   document.getElementById("teamFormModal").classList.remove("hidden");
 }
 
@@ -97,7 +114,12 @@ function loadEditForm() {
   document.getElementById("formTitle").textContent = "Edit Team";
   document.getElementById("editIndex").value = index;
   document.getElementById("teamName").value = team.name;
-  document.getElementById("teamLogo").value = team.logo;
+
+  uploadedLogoDataUrl = team.logo;
+  const preview = document.getElementById("logoPreview");
+  preview.src = team.logo;
+  preview.style.display = "block";
+
   const inputs = document.querySelectorAll("#playersInputs input");
   inputs.forEach((input, i) => input.value = team.players[i]);
   document.getElementById("editModal").classList.add("hidden");
@@ -119,7 +141,7 @@ function showDeleteForm() {
 function handleFormSubmit(e) {
   e.preventDefault();
   const name = document.getElementById("teamName").value;
-  const logo = document.getElementById("teamLogo").value;
+  const logo = uploadedLogoDataUrl;
   const players = Array.from(document.querySelectorAll("#playersInputs input")).map(i => i.value);
   const index = document.getElementById("editIndex").value;
   if (index === "") {
