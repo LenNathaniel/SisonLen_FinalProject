@@ -1,4 +1,3 @@
-/* === Base Layout === */
 body {
   font-family: 'Nunito Sans', sans-serif;
   background: #1e1e2f;
@@ -34,7 +33,7 @@ nav a:hover {
   background-color: #36364a;
 }
 
-/* === Main Content Layout === */
+
 main {
   padding: 20px;
   max-width: 1200px;
@@ -42,7 +41,7 @@ main {
   box-sizing: border-box;
 }
 
-/* === Page Header (Participants title + buttons) === */
+
 .page-header {
   display: flex;
   justify-content: space-between;
@@ -50,8 +49,8 @@ main {
   flex-wrap: wrap;
   gap: 10px;
   margin: 0 auto 20px;
-  max-width: 1200px; /* Match the main container width */
-  padding: 0 20px;    /* Match the padding in <main> */
+  max-width: 1200px; 
+  padding: 0 20px;   
   box-sizing: border-box;
 }
 
@@ -83,7 +82,7 @@ main {
   position: absolute;
  }
 
-/* === CRUD Buttons === */
+
 .crud-buttons button {
   padding: 10px 20px;
   background-color: #28a745;
@@ -100,7 +99,7 @@ main {
   background-color: #218838;
 }
 
-/* === Team Cards === */
+
 #teams-container {
   display: flex;
   flex-wrap: wrap;
@@ -129,7 +128,7 @@ main {
   width: 120px;
   height: 120px;
   object-fit: contain;
-  margin: 0 auto 15px; /* Increased bottom margin */
+  margin: 0 auto 15px; 
   border: none;
 }
 
@@ -140,7 +139,7 @@ main {
   font-size: 18px;
 }
 
-/* === Hover Effect for Player List === */
+
 .players-container {
   position: absolute;
   top: 0;
@@ -184,14 +183,14 @@ main {
 .vertical-line {
   width: 1px;
   background-color: #777;
-  height: calc(24px * 5); /* Exactly spans 5 player rows */
+  height: calc(24px * 5); 
 }
 
 
 .players-list div {
   height: 24px;
   line-height: 24px;
-  font-size: 16px; /* Increased from 14px */
+  font-size: 16px; 
   color: #ffffff;
   font-weight: 500;
 }
@@ -209,7 +208,7 @@ main {
   background-color: #777;
 }
 
-/* === Modal Styling === */
+
 .modal {
   position: fixed;
   top: 0;
