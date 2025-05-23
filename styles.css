@@ -1,3 +1,4 @@
+/* === Base Layout === */
 body {
   font-family: 'Nunito Sans', sans-serif;
   background: #1e1e2f;
@@ -33,14 +34,12 @@ nav a:hover {
   background-color: #36364a;
 }
 
-
 main {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
 }
-
 
 .page-header {
   display: flex;
@@ -50,7 +49,7 @@ main {
   gap: 10px;
   margin: 0 auto 20px;
   max-width: 1200px; 
-  padding: 0 20px;   
+  padding: 0 20px;    
   box-sizing: border-box;
 }
 
@@ -82,7 +81,6 @@ main {
   position: absolute;
  }
 
-
 .crud-buttons button {
   padding: 10px 20px;
   background-color: #28a745;
@@ -98,7 +96,6 @@ main {
 .crud-buttons button:hover {
   background-color: #218838;
 }
-
 
 #teams-container {
   display: flex;
@@ -138,7 +135,6 @@ main {
   color: #ffffff;
   font-size: 18px;
 }
-
 
 .players-container {
   position: absolute;
@@ -207,7 +203,6 @@ main {
   width: 1px;
   background-color: #777;
 }
-
 
 .modal {
   position: fixed;
@@ -379,3 +374,40 @@ main h1 {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
 }
+
+.team-card.show-players .players-container {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.left-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.show-btn {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.show-btn:hover {
+  background-color: #218838;
+}
+
+
+
