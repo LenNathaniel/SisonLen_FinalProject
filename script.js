@@ -1,5 +1,6 @@
 let teams = [];
 let uploadedLogoDataUrl = "";
+let playersShown = false;
 
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("teamLogoFile").addEventListener("change", function () {
@@ -40,6 +41,7 @@ function renderTeams() {
   teams.forEach((team) => {
     const teamDiv = document.createElement("div");
     teamDiv.classList.add("team-card");
+    if (playersShown) teamDiv.classList.add("show-players");
 
     const logoImg = document.createElement("img");
     logoImg.src = team.logo;
@@ -165,3 +167,11 @@ function closeModal() {
   document.getElementById("deleteModal").classList.add("hidden");
   document.getElementById("editModal").classList.add("hidden");
 }
+
+function toggleAllPlayers() {
+  playersShown = !playersShown;
+  const toggleBtn = document.getElementById("togglePlayersBtn");
+  toggleBtn.textContent = playersShown ? "Hide Players" : "Show Players";
+  renderTeams();
+}
+
