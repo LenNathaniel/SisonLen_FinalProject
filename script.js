@@ -142,18 +142,28 @@ function showDeleteForm() {
 
 function handleFormSubmit(e) {
   e.preventDefault();
+
   const name = document.getElementById("teamName").value;
-  const logo = uploadedLogoDataUrl;
   const players = Array.from(document.querySelectorAll("#playersInputs input")).map(i => i.value);
   const index = document.getElementById("editIndex").value;
+
+  if (index === "" && !uploadedLogoDataUrl) {
+    alert("Please upload a logo image for the team.");
+    return;
+  }
+
+  const logo = uploadedLogoDataUrl || teams[index]?.logo;
+
   if (index === "") {
     teams.push({ name, logo, players });
   } else {
     teams[index] = { name, logo, players };
   }
+
   closeModal();
   renderTeams();
 }
+
 
 function confirmDelete() {
   const index = document.getElementById("deleteSelect").value;
